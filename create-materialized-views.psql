@@ -1,0 +1,9 @@
+CREATE MATERIALIZED VIEW search_test
+AS
+SELECT * FROM autocomplete_test;
+
+CREATE INDEX search_test_idx
+ON search_test
+USING GIN (to_tsvector('english', test_data));
+
+REFRESH MATERIALIZED VIEW search_test WITH DATA;

@@ -1,0 +1,4 @@
+CREATE TABLE autocomplete_test (
+    id SERIAL PRIMARY KEY,
+    test_data VARCHAR(255) UNIQUE NOT NULL
+);
